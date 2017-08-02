@@ -1,0 +1,146 @@
+/* IMPORTS -------------------------------------------------------------------- */
+
+@import 'compass/css3';
+@import '_variables';
+@import '_mixins';
+
+@import "compass/utilities/sprites";
+@import "../images/icons/*.png";
+@include all-icons-sprites;
+
+/* DISPLAY NONE -------------------------------------------------------------------- */
+ 
+#sidebar-container.wpseo_content_cell, #c2c.wrap, .cf7com-links {
+    display: none;
+}
+
+/* WP ADMIN BAR -------------------------------------------------------------------- */
+
+#wp-admin-bar-wp-logo{
+    div {
+        display: none !important;
+    }
+}
+
+
+#wpadminbar {
+    color: $white;
+    background: $main; 
+    
+    .ab-item, 
+    a.ab-item,
+    > #wp-toolbar span.ab-label,
+    > #wp-toolbar span.noticon,
+    .ab-icon,
+    .ab-icon:before,
+    .ab-item:before,
+    .ab-item:after,
+    > #wp-toolbar li:hover span.ab-label,
+    > #wp-toolbar li.hover span.ab-label,
+    > #wp-toolbar a:focus span.ab-label,
+    li:hover .ab-icon:before,
+    li:hover .ab-item:before,
+    li:hover .ab-item:after,
+    li:hover #adminbarsearch:before,
+    #wp-admin-bar-user-info a:hover .display-name,
+    #wp-admin-bar-user-info .display-name,
+    .ab-submenu .ab-item, #wpadminbar .quicklinks .menupop ul li a,
+    .quicklinks .menupop.hover ul li a,
+    .quicklinks li .blavatar, #wpadminbar .menupop .menupop > .ab-item:before,
+    .quicklinks .menupop ul li a:hover,
+    .quicklinks .menupop ul li a:focus,
+    .quicklinks .menupop ul li a:hover strong,
+    .quicklinks .menupop ul li a:focus strong,
+    .quicklinks .menupop.hover ul li a:hover,
+    .quicklinks .menupop.hover ul li a:focus,
+    li:hover .ab-item:before,
+    li:hover .ab-icon:before,
+    li a:focus .ab-icon:before,
+    li .ab-item:focus:before,
+    li.hover .ab-icon:before,
+    li.hover .ab-item:before,
+    li:hover .ab-item:after,
+    li.hover .ab-item:after,
+    li:hover #adminbarsearch:before,
+    .quicklinks li a:hover .blavatar,
+    .menupop .menupop > .ab-item:hover:before,
+    #adminbarsearch:before,
+    #wp-admin-bar-user-info .display-name,
+    #wp-admin-bar-user-info a:hover .display-name,
+    #wp-admin-bar-user-info .username {
+        color: $white !important;
+    }
+    
+    .ab-top-menu > li:hover > .ab-item,
+    .ab-top-menu > li.hover > .ab-item,
+    .ab-top-menu > li > .ab-item:focus,
+    .ab-top-menu > li.menupop.hover > .ab-item {
+        color: $white;
+        background-color: $hover;
+    }
+    
+    .menupop .ab-sub-wrapper {
+        background: $hover; 
+  
+        li{
+            &:hover {
+                background-color: $dark;
+            }
+            
+            &#wp-admin-bar-user-info:hover {
+                background-color: none
+            }    
+        }
+    }
+        
+    .menupop .ab-sub-wrapper li#wp-admin-bar-user-info:hover {
+        background-color: none;
+    }
+   
+    > #wp-toolbar > #wp-admin-bar-top-secondary > #wp-admin-bar-search #adminbarsearch input.adminbar-input:focus {
+        color: $white;
+        background: $light;
+    }
+    
+    .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {
+        border-color: $light;
+        background-color: $light;
+    }
+    
+
+    #adminbarsearch .adminbar-input {
+        @include placeholder {
+            color: $white;
+        }
+    }
+    
+    #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+        content: "";
+        display: block;
+        @extend .icons-wp-admin;
+        width: 16px;
+        height: 20px;
+        left: 2px;
+    }
+}
+
+#wpadminbar-nojs, #wpadminbar.nojs {
+    .ab-top-menu > li.menupop:hover > .ab-item,
+    .quicklinks .menupop:hover ul li a,
+    .quicklinks .menupop:hover ul li a:hover,
+    .quicklinks .menupop:hover ul li a:focus {
+        color: $white;
+    }
+}
+
+@media screen and (max-width: 782px) {
+	#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+		content: "";
+        display: block;
+		height: 32px;
+		width: 26px;
+		background-position: 0 0;
+		left: 12px;
+		top: 6px;
+	}
+}

@@ -1,0 +1,27 @@
+$basefont: 18 !default;
+$containermax-width: 1110 !default;
+$containerwidth: 90 !default;
+
+/* GREYSCALE COLORS -------------------------------------------------------------------- */
+
+$white: #fff !default;
+$grey: #333 !default;
+$black: #000 !default;
+
+/* SITE COLORS -------------------------------------------------------------------- */
+
+$light: #3aacd9 !default;
+$main: #25a3d5 !default;
+$dark: #208fbb !default;
+$hover: #2399c8 !default;
+$text: $black !default;
+
+/* FlEXNAV -------------------------------------------------------------------- */
+
+$flexnav-bg: $main !default;
+$flexnav-hover: $hover !default;
+$flexnav-border: $dark !default;
+$flexnav-text: $text !default;
+
+$menuheight: 63 !default;
+$flexnav-switch: 660 !default;

@@ -1,0 +1,48 @@
+@mixin placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; } 
+}
+
+@mixin selection {
+  &::-moz-selection{ @content; }
+  &::selection{ @content; }
+}
+
+@function em($target, $context: $basefont) {
+    @return ($target / $context) * 1em;
+}
+
+@mixin container($max-width: $containermax-width, $width: $containerwidth) {
+  width: $width * 1%;
+  max-width: $max-width + px;
+  margin: 0 auto;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin animation ($content) {
+  -moz-animation: $content;
+	-webkit-animation: $content;
+	animation: $content;
+}
+
+@mixin animation-timing($content: linear) {
+	-webkit-animation-timing-function: $content;
+	animation-timing-function: $content;
+}
